@@ -1,28 +1,30 @@
-// Qual o resultado da seguinte expressão?
+// Verifique se a sua idade é maior do que a de algum parente
+// Dependendo do resultado coloque no console 'É maior', 'É igual' ou 'É menor'
 
-var total = 10 + 5 * 2 / 2 + 20;
-// 35
-console.log(total);
+// Qual valor é retornado na seguinte expressão?
+var expressao = (5 - 2) && (5 - ' ') && (5 - 2);
 
-// Crie duas expressões que retornem NaN
+// Verifique se as seguintes variáveis são Truthy ou Falsy
+var nome = 'Andre';
+var idade = 28;
+var possuiDoutorado = false;
+var empregoFuturo;
+var dinheiroNaConta = 0;
 
-let viraNanNumber = '45w';
-let somaNan = +viraNanNumber + 5;
-console.log(somaNan);
+// Compare o total de habitantes do Brasil com China (valor em milhões)
+var brasil = 207;
+var china = 1340;
 
-// Somar a string '200' com o número 50 e retornar 250
+// O que irá aparecer no console?
+if(('Gato' === 'gato') && (5 > 2)) {
+  console.log('Verdadeiro');
+} else {
+  console.log('Falso');
+}
 
-let somaStr = +'200' + 50;
-console.log(somaStr);
-
-// Incremente o número 5 e retorne o seu valor incrementado
-
-let incremento5 = 5;
-console.log(++incremento5);
-
-// Como dividir o peso por 2?
-var numero = +'80' / 2;
-var unidade = 'kg';
-var peso = numero + unidade; // '80kg' // NaN (Not a Number)
-
-console.log(peso)
+// O que irá aparecer no console?
+if(('Gato' === 'gato') || (5 > 2)) {
+  console.log('Gato' && 'Cão');
+} else {
+  console.log('Falso');
+}
