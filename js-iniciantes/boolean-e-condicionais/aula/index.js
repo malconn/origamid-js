@@ -58,7 +58,7 @@ let condicional2 = (5 - 5) || (5 + 5) || (10 - 2);
 console.log(condicional2);
 
 
-let corFavorita = 'Aul';
+let corFavorita = 'Azul';
 
 switch(corFavorita){
     case 'Azul':
