@@ -1,15 +1,13 @@
 // Crie uma função para verificar se um valor é Truthy
 function verificaTruthy(value){
-    if(value){
-      return 'true';
-    }
+    return !!value;
 }
 console.log(verificaTruthy(1));
 
 // Crie uma função matemática que retorne o perímetro de um quadrado
 // lembrando: perímetro é a soma dos quatro lados do quadrado
 function areaQuadrado(lado){
-    return lado * lado ;
+    return lado * 4 ;
 }
 
 console.log(areaQuadrado(4));
