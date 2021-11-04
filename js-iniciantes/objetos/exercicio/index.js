@@ -1,13 +1,17 @@
 // Crie um objeto com os seus dados pessoais
 // Deve possui pelo menos duas propriedades nome e sobrenome
+
 const dadosPessoais = {
   nome: "Malcon",
   sobrenome: "Augusto",
   idade: 19,
   cargo: "Dev FrontEnd Jr.",
 };
+
 // Crie um método no objeto anterior, que mostre o seu nome completo
-dadosPessoais.nomeCompleto = `${dadosPessoais.nome}${dadosPessoais.sobrenome}`;
+dadosPessoais.nomeCompleto = function () {
+  return `${this.nome}${this.sobrenome}`;
+};
 
 console.log(dadosPessoais.nomeCompleto);
 // Modifique o valor da propriedade preco para 3000
@@ -27,7 +31,10 @@ const cachorro = {
   raca: "labrador",
   cor: "preto",
   idade: 10,
-  verHomem() {
-    return "late";
+  latir(pessoa) {
+    if (pessoa === "Homem" || pessoa === "homem") {
+      return "late";
+    }
+    return "Não late";
   },
 };
