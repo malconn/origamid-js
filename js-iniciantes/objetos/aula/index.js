@@ -22,3 +22,22 @@ const quadrado = {
 
 console.log(quadrado.area(5));
 console.log(quadrado.perimetro(5));
+
+const menu = {
+  width: 800,
+  height: 50,
+  backgroundColor: "#84E",
+  metadeHeigth() {
+    return this.height / 2;
+  },
+};
+
+menu.backgroundColor = "#000";
+
+menu.color = "#fff";
+
+menu.esconder = function () {
+  console.log("escondeu");
+};
+
+var bg = menu.backgroundColor;
