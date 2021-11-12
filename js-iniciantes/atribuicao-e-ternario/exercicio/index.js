@@ -2,9 +2,9 @@
 // atribuindo o novo valor a scroll
 var scroll = 1000;
 
-scroll+= 500;
+scroll += 500;
 
-console.log(scroll)
+console.log(scroll);
 // Atribua true para a variável darCredito,
 // caso o cliente possua carro e casa.
 // E false caso o contrário.
@@ -12,8 +12,9 @@ var possuiCarro = true;
 var possuiCasa = true;
 var darCredito;
 
-darCredito = 'DAR CRÉDITO AO CLIENTE';
-
-let condicaoCliente = (possuiCarro && possuiCasa) ? darCredito : false; 
+let condicaoCliente =
+  possuiCarro && possuiCasa
+    ? "DAR CRÉDITO AO CLIENTE"
+    : "NEGAR CRÉDITO AO CLIENTE";
 
 console.log(condicaoCliente);
