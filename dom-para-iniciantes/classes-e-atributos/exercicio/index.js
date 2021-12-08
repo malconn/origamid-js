@@ -1,25 +1,25 @@
-// Mostre no console cada parágrado do site
-const cadaP = document.querySelectorAll("p");
+// Adicione a classe ativo a todos os itens do menu
+const menuAll = document.querySelectorAll(".menu li");
 
-cadaP.forEach((p) => {
-  console.log(p);
+menuAll.forEach((item) => {
+  item.classList.add("ativo");
 });
-// Mostre o texto dos parágrafos no console
+// Remove a classe ativo de todos os itens do menu e mantenha apenas no primeiro
+menuAll[1].classList.remove("ativo");
+menuAll[2].classList.remove("ativo");
+menuAll[3].classList.remove("ativo");
+// Verifique se as imagens possuem o atributo alt
 
-cadaP.forEach((pText) => {
-  console.log(pText.innerText);
+const verifyAltAttr = document.querySelectorAll("img");
+
+verifyAltAttr.forEach((item) => {
+  const cadaAlt = item.hasAttribute("alt");
+
+  console.log(cadaAlt);
 });
+// Modifique o href do link externo no menu
+const menuLinkExterno = document.querySelector('.menu [href^="https://"]');
 
-// Como corrigir os erros abaixo:
-const imgs = document.querySelectorAll("img");
+console.log(menuLinkExterno);
 
-imgs.forEach((item, index) => {
-  console.log(item, index);
-});
-
-let i = 0;
-imgs.forEach(() => {
-  console.log(i++);
-});
-
-imgs.forEach(() => i++);
+menuLinkExterno.setAttribute("href", "https://youtube.com");
