@@ -1,51 +1,59 @@
-body,h1,h2,ul,li,p,dd,dt,dl{
+body,
+h1,
+h2,
+ul,
+li,
+p,
+dd,
+dt,
+dl {
   margin: 0;
   padding: 0;
 }
-img{
+img {
   display: block;
   max-width: 100%;
 }
 
-ul{
+ul {
   list-style: none;
 }
 
-body{
+body {
   background: #faf6ed;
   color: #222;
-  -webkit-font-smoothing:antialiased;
+  -webkit-font-smoothing: antialiased;
   display: grid;
-  grid-template-columns: 1fr 120px minmax(300px,800px) 1fr;
+  grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
 }
 
-.menu{
+.menu {
   grid-column: 3/ 5;
   margin-top: 2rem;
   margin-bottom: 2rem;
   background: #fb5;
 }
 
-.menu ul{
+.menu ul {
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
 }
 
-.menu li a{
+.menu li a {
   display: block;
-  padding: 10px;
+  padding: 15px 10px;
   margin-right: 10px;
   color: #222;
   text-decoration: none;
-  font-family: 'IBM Plex Mono',monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 0.875rem;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
 }
 
-.grid-section{
+.grid-section {
   grid-column: 2 / 4;
   width: 100%;
   box-sizing: border-box;
@@ -56,7 +64,7 @@ body{
   margin-bottom: 4rem;
 }
 
-.titulo{
+.titulo {
   font-family: "Playfair Display SC", georgia;
   font-size: 6rem;
   line-height: 1;
@@ -64,137 +72,141 @@ body{
   margin-bottom: 1rem;
   grid-column: 1 / 4;
 }
-.animais h2{
-  font-family: 'IBM Plex Mono', monospace;
+.animais h2 {
+  font-family: "IBM Plex Mono", monospace;
   font-size: 1rem;
   text-transform: uppercase;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   margin-bottom: 1rem;
-  color: #E54 ;
+  color: #e54;
 }
-.animais h2:before{
+.animais h2:before {
   content: "";
   display: inline-block;
   width: 40px;
   height: 10px;
   margin-right: 10px;
-  background: #Fb5;
+  background: #fb5;
 }
 
-.animais p{
+.animais p {
   font-family: Helvetica, Arial;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
 
-.animais-lista{
+.animais-lista {
   height: 360px;
   overflow-y: scroll;
   grid-column: 2;
 }
 
-.animais-lista::-webkit-scrollbar{
+.animais-lista::-webkit-scrollbar {
   width: 18px;
 }
 
-.animais-lista::-webkit-scrollbar-thumb{
-  background: #Fb5;
-  border-left:4px solid #faf6ed;
-  border-right:4px solid #faf6ed;
+.animais-lista::-webkit-scrollbar-thumb {
+  background: #fb5;
+  border-left: 4px solid #faf6ed;
+  border-right: 4px solid #faf6ed;
 }
-.animais-lista::-webkit-scrollbar-track{
+.animais-lista::-webkit-scrollbar-track {
   background: #faf6ed;
 }
 
-.animais-descricao{
+.animais-descricao {
   grid-column: 3;
 }
-.animais-descricao section{
+.animais-descricao section {
   margin-bottom: 3rem;
 }
 
-.faq-lista{
+.faq-lista {
   grid-column: 2/4;
 }
-.faq-lista dt{
-  font-family: 'IBM Plex Mono', monospace;
+.faq-lista dt {
+  font-family: "IBM Plex Mono", monospace;
   font-weight: bold;
   margin-top: 2rem;
-  margin-bottom: .5rem;
-  color: #E54;
+  margin-bottom: 0.5rem;
+  color: #e54;
 }
-.faq-lista dt::before{
+.faq-lista dt::before {
   content: "";
   display: inline-block;
   width: 20px;
   height: 10px;
   margin-right: 10px;
-  background: #Fb5;
+  background: #fb5;
 }
 
-.faq-lista dd{
+.faq-lista dd {
   font-family: Helvetica, Arial;
-  margin-bottom: .5rem;
-  margin-left:30px ;
+  margin-bottom: 0.5rem;
+  margin-left: 30px;
 }
 
-.mapa{
+.mapa {
   grid-column: 2;
 }
 
-.dados{
+.dados {
   grid-column: 3;
 }
-.dados li{
+.dados li {
   margin-bottom: 1rem;
-  font-family:Helvetica, Arial;
+  font-family: Helvetica, Arial;
 }
 
-.dados li::before{
+.dados li::before {
   content: "";
   display: inline-block;
   width: 20px;
   height: 10px;
   margin-right: 10px;
-  background: #Fb5;
+  background: #fb5;
 }
 
-.copy{
+.copy {
   grid-column: 3/5;
   margin-bottom: 2rem;
-  background: #Fb5;
+  background: #fb5;
 }
 
-.copy p{
+.copy p {
   padding: 20px;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: bold;
 }
 
-@media (max-width:700px){
-  body{
+@media (max-width: 700px) {
+  body {
     grid-template-columns: 1fr;
   }
-  .menu,.grid-section,.copy{
+  .menu,
+  .grid-section,
+  .copy {
     grid-column: 1;
   }
-  .grid-section{
-    grid-template-columns:100px 1fr ;
-    grid-gap:10px;
+  .grid-section {
+    grid-template-columns: 100px 1fr;
+    grid-gap: 10px;
   }
-  .animais-lista{
+  .animais-lista {
     grid-column: 1;
   }
-  .faq-lista,.dados,.mapa{
+  .faq-lista,
+  .dados,
+  .mapa {
     grid-column: 1/3;
   }
-  .grid-section h1{
+  .grid-section h1 {
     font-size: 3rem;
   }
-  .menu{
+  .menu {
     margin-top: 0;
   }
-  .copy{
+  .copy {
     margin-bottom: 0;
   }
 }
