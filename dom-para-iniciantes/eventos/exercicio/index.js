@@ -7,7 +7,7 @@ function handleClickInterno(event) {
   const removeAtivo = document.querySelectorAll(".ativo").forEach((item) => {
     item.classList.remove("ativo");
   });
-  event.target.classList.toggle("ativo");
+  event.currentTarget.classList.toggle("ativo");
 }
 const linksInternos = document.querySelectorAll('a[href^="#"]');
 linksInternos.forEach((link) => {
@@ -17,21 +17,28 @@ linksInternos.forEach((link) => {
 // Selecione todos os elementos do site começando a partir do body,
 // ao clique mostre exatamente quais elementos estão sendo clicados
 function handleBody(event) {
-  console.log(event.target);
+  console.log(event.currentTarget);
 }
-const bodyAll = document.body;
-bodyAll.addEventListener("click", handleBody);
+const bodyAll = document.querySelectorAll("body *");
+
+bodyAll.forEach((elemento) => {
+  elemento.addEventListener("click", handleBody);
+});
+
 // Utilizando o código anterior, ao invés de mostrar no console,
 // remova o elemento que está sendo clicado, o método remove() remove um elemento
 function removeElement(event) {
   event.target.remove();
 }
-// bodyAll.addEventListener("click", removeElement);
+// bodyAll.forEach((elemento) => {
+//   elemento.addEventListener("click", removeElement);
+// });
 // Se o usuário clicar na tecla (t), aumente todo o texto do site.
 
 function resizeText(event) {
   if (event.key === "t") {
-    document.body.style.fontSize = "4rem";
+    document.documentElement.classList.toggle("textomaior");
   }
 }
-bodyAll.addEventListener("keydown", resizeText);
+
+window.addEventListener("keydown", resizeText);
