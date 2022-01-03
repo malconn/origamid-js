@@ -1,44 +1,19 @@
-// Quando o usuário clicar nos links internos do site,
-// adicione a classe ativo ao item clicado e remova dos
-// demais itens caso eles possuam a mesma. Previna
-// o comportamento padrão desses links
-function handleClickInterno(event) {
-  event.preventDefault();
-  const removeAtivo = document.querySelectorAll(".ativo").forEach((item) => {
-    item.classList.remove("ativo");
-  });
-  event.currentTarget.classList.toggle("ativo");
-}
-const linksInternos = document.querySelectorAll('a[href^="#"]');
-linksInternos.forEach((link) => {
-  link.addEventListener("click", handleClickInterno);
-});
+// Duplique o menu e adicione ele em copy
+const menu = document.querySelector('.menu');
+const copy = document.querySelector('.copy');
+const cloneMenu = menu.cloneNode(true);
 
-// Selecione todos os elementos do site começando a partir do body,
-// ao clique mostre exatamente quais elementos estão sendo clicados
-function handleBody(event) {
-  console.log(event.currentTarget);
-}
-const bodyAll = document.querySelectorAll("body *");
+copy.appendChild(cloneMenu)
 
-bodyAll.forEach((elemento) => {
-  elemento.addEventListener("click", handleBody);
-});
 
-// Utilizando o código anterior, ao invés de mostrar no console,
-// remova o elemento que está sendo clicado, o método remove() remove um elemento
-function removeElement(event) {
-  event.target.remove();
-}
-// bodyAll.forEach((elemento) => {
-//   elemento.addEventListener("click", removeElement);
-// });
-// Se o usuário clicar na tecla (t), aumente todo o texto do site.
+// Selecione o primeiro DT da dl de Faq
+const faq = document.querySelector('.faq');
+const primeiroDt = faq.querySelector('dt');
 
-function resizeText(event) {
-  if (event.key === "t") {
-    document.documentElement.classList.toggle("textomaior");
-  }
-}
+// Selecione o DD referente ao primeiro DT
+const ddFromDt = primeiroDt.parentElement.children[1];
 
-window.addEventListener("keydown", resizeText);
+// Substitua o conteúdo html de .faq pelo de .animais
+const animais = document.querySelector('.animais');
+
+const innerHTML = faq.innerHTML = animais.innerHTML;
