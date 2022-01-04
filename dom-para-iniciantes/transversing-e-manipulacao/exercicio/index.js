@@ -11,9 +11,9 @@ const faq = document.querySelector('.faq');
 const primeiroDt = faq.querySelector('dt');
 
 // Selecione o DD referente ao primeiro DT
-const ddFromDt = primeiroDt.parentElement.children[1];
+const proximoDD = primeiroDt.nextElementSibling;
 
 // Substitua o conteúdo html de .faq pelo de .animais
 const animais = document.querySelector('.animais');
 
-const innerHTML = faq.innerHTML = animais.innerHTML;
+faq.innerHTML = animais.innerHTML;
