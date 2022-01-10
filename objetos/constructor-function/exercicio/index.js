@@ -1,22 +1,37 @@
-// Crie uma array com os anos que o Brasil ganhou a copa
-// 1959, 1962, 1970, 1994, 2002
-let brasilGanhouCopa = [1959, 1962, 1970, 1994, 2002];
-// Interaja com a array utilizando um loop, para mostrar
-// no console a seguinte mensagem, `O brasil ganhou a copa de ${ano}`
-brasilGanhouCopa.forEach((ano) => {
-  console.log(`O Brasil ganhou a copa de ano ${ano}`);
-});
-// Interaja com um loop nas frutas abaixo e pare ao chegar em Pera
-var frutas = ["Banana", "Maçã", "Pera", "Uva", "Melância"];
-
-for (let i = 0; i < frutas.length; i++) {
-  console.log(frutas[i]);
-  if (frutas[i] === "Pera") {
-    break;
+// Transforme o objeto abaixo em uma Constructor Function
+function  pessoa (nome,idade) {
+  this.init = ()=> {
+    console.log(nome + ' - ' + idade + ' anos');
   }
 }
-// Coloque a última fruta da array acima em uma variável,
-// sem remover a mesma da array.
-let ultimaFruta = frutas[frutas.length - 1];
 
-console.log("Ultima fruta =>", ultimaFruta);
+// Crie 3 pessoas, João - 20 anos,
+// Maria - 25 anos, Bruno - 15 anos
+const joao = new pessoa('João', 20);
+const maria = new pessoa('Maria', 25);
+const bruno = new pessoa('Bruno', 15);
+
+// Crie uma Constructor Function (Dom) para manipulação
+// de listas de elementos do dom. Deve conter as seguintes
+// propriedades e métodos:
+//
+// elements, retorna NodeList com os elementos selecionados
+// addClass(classe), adiciona a classe a todos os elementos
+// removeClass(classe), remove a classe a todos os elementos
+
+function dom (seletor){
+  this.elements = document.querySelectorAll(seletor);
+
+  this.addClass = (classe)=>{
+    this.elements.forEach((item)=>{
+      item.classList.add(classe);
+    })
+  }
+
+  this.removeClass = (classe)=>{
+    this.elements.forEach((item)=>{
+      item.classList.remove(classe);
+    })
+  }
+}
+
