@@ -1,17 +1,25 @@
-function Carro(marcaAtribuida, precoAtribuido) {
-  this.marca = marcaAtribuida;
-  this.preco = precoAtribuido;
+// const Dom = {
+//   seletor: "li",
+
+//   element() {
+//     return document.querySelector(this.seletor);
+//   },
+//   ativar() {
+//     return this.element().classList.add("ativar");
+//   },
+// };
+function Dom(seletor) {
+  this.element = () => {
+    return document.querySelector(seletor);
+  };
+
+  this.ativar = () => {
+    return this.element().classList.add("ativar");
+  };
 }
 
-const honda = new Carro("Honda", 23000);
+const li = new Dom("li");
+const ul = new Dom("ul");
 
-const fiat = new Carro("Fiat", 30000);
-
-function Carro2(marcaAtribuida, precoInicial) {
-  const taxa = 1.2;
-  const precoFinal = precoInicial * taxa;
-  this.marca = marcaAtribuida;
-  this.preco = precoFinal;
-}
-
-const mazda = new Carro2("Mazda", 5000);
+const lastLi = new Dom("li:last-child");
+lastLi.ativar();
