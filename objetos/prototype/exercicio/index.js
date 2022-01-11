@@ -1,49 +1,34 @@
-// Transforme o objeto abaixo em uma Constructor Function
-// const pessoa = {
-//   nome: 'Nome pessoa',
-//   idade: 0,
-//   andar() {
-//     console.log(this.nome + ' andou');
-//   }
-// }
+// Crie uma função construtora de Pessoas
+// Deve conter nome, sobrenome e idade
+// Crie um método no protótipo que retorne
+// o nome completo da pessoa
 
-function Pessoa (nome,idade){
+function Pessoa(nome,sobrenome,idade){
   this.nome = nome;
+  this.sobrenome = sobrenome;
   this.idade = idade;
-  this.andar = ()=>{
-    console.log(this.nome + ' Andou');
-  }
-}
-// Crie 3 pessoas, João - 20 anos,
-// Maria - 25 anos, Bruno - 15 anos
-const joao = new Pessoa('João', 20);
-const maria = new Pessoa('Maria', 25);
-const bruno = new Pessoa('Bruno', 15);
-
-// Crie uma Constructor Function (Dom) para manipulação
-// de listas de elementos do dom. Deve conter as seguintes
-// propriedades e métodos:
-//
-// elements, retorna NodeList com os elementos selecionados
-// addClass(classe), adiciona a classe a todos os elementos
-// removeClass(classe), remove a classe a todos os elementos
-
-function Dom (seletor){
-  const elementList = document.querySelectorAll(seletor);
-
-  this.elements = elementList;
-
-  this.addClass = (classe)=>{
-    elementList.forEach((item)=>{
-      item.classList.add(classe);
-    })
-  }
-
-  this.removeClass = (classe)=>{
-    elementList.forEach((item)=>{
-      item.classList.remove(classe);
-    })
-  }
-
 }
 
+Pessoa.prototype.nomeCompleto = function() {
+  return this.nome + ' ' +  this.sobrenome
+}
+
+const malcon = new Pessoa('Malcon', 'Augusto', 18)
+
+// Liste os métodos acessados por 
+// dados criados com NodeList,
+// HTMLCollection, Document
+
+// Liste os construtores dos dados abaixo
+const li = document.querySelector('li');
+
+li;
+li.click;
+li.innerText;
+li.value;
+li.hidden;
+li.offsetLeft;
+li.click();
+
+// Qual o construtor do dado abaixo:
+li.hidden.constructor.name;
