@@ -16,6 +16,26 @@ Pessoa.prototype.nadar = function(){
 
 const andre = new Pessoa('André', 28);
 
-console.log(Pessoa.prototype);
-console.log(andre.andar())
-console.log(andre.nadar())
+// console.log(Pessoa.prototype);
+// console.log(andre.andar())
+// console.log(andre.nadar())
+
+const pais = 'Brasil'
+
+const cidade  = new String('Rio')
+
+const lista = document.querySelectorAll('li')
+
+const listaAnimais = ['Cachorro', 'Gato', 'Cavalo'];
+
+const listaArray1 = Array.prototype.slice.call(lista)
+const listaArray2 = Array.from(lista)
+
+
+const Carro = {
+  marca : 'Ford',
+  preco : 2000,
+  andar : () =>{
+    return true;
+  }
+}
