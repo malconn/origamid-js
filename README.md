@@ -1,2 +1,2 @@
 # origamid-js
-curso de javascript da Origamid
+Meu repositório de exercícios e aulas da Origamid.
