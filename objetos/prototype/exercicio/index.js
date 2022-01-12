@@ -19,6 +19,10 @@ const malcon = new Pessoa("Malcon", "Augusto", 18);
 // dados criados com NodeList,
 // HTMLCollection, Document
 
+// NodeList && HTMLCollection => 'length', 'name', 'arguments', 'caller', 'prototype'
+
+// Document => Várias para manipular o dom
+
 // Liste os construtores dos dados abaixo
 const li = document.querySelector("li");
 
@@ -28,7 +32,7 @@ const li = document.querySelector("li");
 // li.value; => Number;
 // li.hidden; => Boolean;
 // li.offsetLeft; => Number;
-// li.click(); => não tem constructor do retorno undefined
+// li.click(); => não tem constructor do retorno undefined & Null
 
 // Qual o construtor do dado abaixo:
 // li.hidden.constructor.name; => String;
