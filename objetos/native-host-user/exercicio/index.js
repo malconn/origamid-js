@@ -1,34 +1,19 @@
-// Crie uma função construtora de Pessoas
-// Deve conter nome, sobrenome e idade
-// Crie um método no protótipo que retorne
-// o nome completo da pessoa
+// Liste 5 objetos nativos
+Object
+String
+Array
+Function
+Number
+Math
+// Liste 5 objetos do browser
+Window
+Document
+HTMLCollection
+NodeList
+AbortController
+// Liste 2 Métodos, Propriedades ou Objetos
+// presentes no Chrome que não existem no Firefox
 
-function Pessoa(nome,sobrenome,idade){
-  this.nome = nome;
-  this.sobrenome = sobrenome;
-  this.idade = idade;
+if(typeof document.webkitCancelFullScreen !== 'undefined' || typeof document.webkitExitFullscreen !== 'undefined'){
+  console.log('Existe')
 }
-
-Pessoa.prototype.nomeCompleto = function() {
-  return this.nome + ' ' +  this.sobrenome
-}
-
-const malcon = new Pessoa('Malcon', 'Augusto', 18)
-
-// Liste os métodos acessados por 
-// dados criados com NodeList,
-// HTMLCollection, Document
-
-// Liste os construtores dos dados abaixo
-const li = document.querySelector('li');
-
-// li;
-// li.click;
-// li.innerText;
-// li.value;
-// li.hidden;
-// li.offsetLeft;
-// li.click();
-
-// Qual o construtor do dado abaixo:
-// li.hidden.constructor.name;
