@@ -28,14 +28,14 @@ transacoes.forEach((transacao) => {
 
   transacao.valor = removeValue;
 
-  console.log(transacao);
+  // console.log(transacao);
 });
 // Retorne uma array com a lista abaixo
 const transportes = "Carro;Avião;Trem;Ônibus;Bicicleta";
 
 const arrayTransportes = transportes.split(";");
 
-console.log(arrayTransportes);
+// console.log(arrayTransportes);
 
 // Substitua todos os span's por a's
 const html = `<ul>
@@ -48,19 +48,19 @@ const removeSpan = html.split("span");
 
 const replaceSpanToa = removeSpan.join("a");
 
-console.log(replaceSpanToa);
+// console.log(replaceSpanToa);
 
 // Retorne o último caracter da frase
 const frase = "Melhor do ano!";
 
 const finalCaractere = frase[frase.length - 1];
 
-console.log(finalCaractere);
+// console.log(finalCaractere);
 // Retorne o total de taxas
-// const transacoes = [
-//   "Taxa do Banco",
-//   "   TAXA DO PÃO",
-//   "  taxa do mercado",
-//   "depósito Bancário",
-//   "TARIFA especial",
-// ];
+const transacoes2 = [
+  "Taxa do Banco",
+  "   TAXA DO PÃO",
+  "  taxa do mercado",
+  "depósito Bancário",
+  "TARIFA especial",
+];
