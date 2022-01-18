@@ -7,8 +7,10 @@ const aleatorio =
 console.log(aleatorio);
 
 // Retorne o maior número da lista abaixo
-let numeros = Math.max(4, 5, 20, 8, 9)
-console.log(numeros)
+const numeros = '4, 5, 20, 8, 9'
+const arrayNumeros = numeros.split(", ")
+const numeroMaximo = Math.max(...arrayNumeros)
+console.log(numeroMaximo)
 
 // Crie uma função para limpar os preços
 // e retornar os números com centavos arredondados
@@ -16,11 +18,18 @@ console.log(numeros)
 const listaPrecos = ['R$ 59,99', ' R$ 100,222',
                      'R$ 230  ', 'r$  200'];
 
-function Limpapreco(){
-  listaPrecos.forEach((item) => {
-    let itemRemovers = +item.toLocaleUpperCase().replace('R$ ','').trim().replace(',','.')
-    console.log(itemRemovers.toLocaleString("pt-BR", { style: "currency", currency: "BRL" }))
-  })
+function Limpapreco(preco){
+  preco = +preco.toUpperCase().replace('R$','').trim().replace(',','.');
+  preco = +preco.toFixed(2);
+  return preco;
 }
 
-Limpapreco();
+let soma = 0;
+
+listaPrecos.forEach((preco) => {
+    soma+= Limpapreco(preco);
+})
+
+const resultBRL = soma.toLocaleString('pt-BR', {style:'currency',currency:'BRL'});
+
+console.log(resultBRL);
