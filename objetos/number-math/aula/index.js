@@ -1,53 +1,20 @@
-// const comida = "Pizza";
+console.log(Number.isNaN("ds"));
+console.log(Number.isInteger(10));
+console.log(parseFloat("100.27 reais"));
+console.log(parseInt("100.27 reais", 10));
 
-// const agua = new String("Agua ");
+const preco = 10.15216516;
 
-// console.log(agua.length);
+console.log(+preco.toFixed());
 
-const frase = "A melhor linguagem é";
+let preco2 = 10.49;
 
-const linguagem = " Javascript";
+preco2 = preco2.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 
-console.log(frase.charAt(frase.length));
+console.log(Math.PI);
 
-const fraseFinal = frase.concat(linguagem);
-
-const fruta = "Banana";
-
-const listaFrutas = "Melancia, Banana,Laranja";
-
-console.log(fruta.startsWith("Ba"));
-
-const preco = "R$99,00";
-
-const listaPrecos = ["R$ 99", "R$ 199", "R$ 1200"];
-
-listaPrecos.forEach((item) => {
-  console.log(item.padStart(15, "="));
-});
-
-const frase2 = "Ta";
-
-frase2.repeat(5);
-
-let listaItens = "Camisas Bonés Calças Bermudas Vestidos Saias";
-// listaItens = listaItens.replace(/[ ]+/g, ", ");
-
-const arrayLista = listaItens.split(" ");
-
-console.log(arrayLista);
-
-const htmlText = "<div>O melhor item</div><div>A melhor lista</div>";
-const htmlArray = htmlText.split("div");
-const novoHtml = htmlArray.join("section");
-
-console.log(htmlText);
-console.log(htmlArray);
-
-const frutasArray = ["Banana", "Melancia", "Laranja"];
-
-const sexo1 = "Feminino";
-const sexo2 = "feminino";
-const sexo3 = "FEMININO";
-
-console.log(sexo1.toLowerCase() === "feminino");
+const maxNumber = 52;
+const minNumber = 22;
+const aleatorio =
+  Math.floor(Math.random() * (maxNumber - minNumber + 1)) + minNumber;
+console.log(aleatorio);
