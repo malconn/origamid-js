@@ -1,77 +1,26 @@
-// Utilizando o foreach na array abaixo,
-// some os valores de Taxa e os valores de Recebimento
+// Retorne um número aleatório
+// entre 1050 e 2000
+const maxNumber = 1050;
+const minNumber = 2000;
+const aleatorio =
+  Math.floor(Math.random() * (maxNumber - minNumber + 1)) + minNumber;
+console.log(aleatorio);
 
-const transacoes = [
-  {
-    descricao: "Taxa do Pão",
-    valor: "R$ 39",
-  },
-  {
-    descricao: "Taxa do Mercado",
-    valor: "R$ 129",
-  },
-  {
-    descricao: "Recebimento de Cliente",
-    valor: "R$ 99",
-  },
-  {
-    descricao: "Taxa do Banco",
-    valor: "R$ 129",
-  },
-  {
-    descricao: "Recebimento de Cliente",
-    valor: "R$ 49",
-  },
-];
-let taxaTotal = 0;
-let recebimentoTotal = 0;
-transacoes.forEach((transacao) => {
-  const numeroLimpo = +transacao.valor.replace("R$", "");
+// Retorne o maior número da lista abaixo
+let numeros = Math.max(4, 5, 20, 8, 9)
+console.log(numeros)
 
-  if (transacao.descricao.slice(0, 4) === "Taxa") {
-    return (taxaTotal += numeroLimpo);
-  } else {
-    return (recebimentoTotal += numeroLimpo);
-  }
-});
-// Retorne uma array com a lista abaixo
-const transportes = "Carro;Avião;Trem;Ônibus;Bicicleta";
+// Crie uma função para limpar os preços
+// e retornar os números com centavos arredondados
+// depois retorne a soma total
+const listaPrecos = ['R$ 59,99', ' R$ 100,222',
+                     'R$ 230  ', 'r$  200'];
 
-const arrayTransportes = transportes.split(";");
+function Limpapreco(){
+  listaPrecos.forEach((item) => {
+    let itemRemovers = +item.toLocaleUpperCase().replace('R$ ','').trim().replace(',','.')
+    console.log(itemRemovers.toLocaleString("pt-BR", { style: "currency", currency: "BRL" }))
+  })
+}
 
-// console.log(arrayTransportes);
-
-// Substitua todos os span's por a's
-let html = `<ul>
-                <li><span>Sobre</span></li>
-                <li><span>Produtos</span></li>
-                <li><span>Contato</span></li>
-              </ul>`;
-
-html = html.split("span").join("a").toLowerCase();
-
-// console.log(html);
-
-// Retorne o último caracter da frase
-const frase = "Melhor do ano!";
-
-const finalCaractere = frase.slice(-1);
-
-// console.log(finalCaractere);
-// Retorne o total de taxas
-const transacoes2 = [
-  "Taxa do Banco",
-  "   TAXA DO PÃO",
-  "  taxa do mercado",
-  "depósito Bancário",
-  "TARIFA especial",
-];
-let taxasTotal = 0;
-transacoes2.forEach((transacao) => {
-  transacao = transacao.trimStart().toLowerCase().slice(0, 4);
-  if (transacao === "taxa") {
-    return taxasTotal++;
-  }
-});
-
-console.log(taxasTotal);
+Limpapreco();
