@@ -1,53 +1,39 @@
-// const comida = "Pizza";
+// // const instrumentos = ['Guitarra','Baixo','Violão'];
+// const precos = [49,99,69,89];
 
-// const agua = new String("Agua ");
+// const dados = [new String('Tipo 1'), ['Carro','Portas',{cor:'Azul',preco:2000}],function andar(nome){console.log(nome)}]
 
-// console.log(agua.length);
+// const carros = new Array('Ford','Fiat','Honda');
 
-const frase = "A melhor linguagem é";
+// const li = document.querySelectorAll('li');
+// const arrayLi = Array.from(li);
+// console.log(li);
+// console.log(arrayLi);
 
-const linguagem = " Javascript";
+// const frutas = ['Banana', 'Pêra', ['Uva Roxa', 'Uva Verde']];
 
-console.log(frase.charAt(frase.length));
+// console.log(frutas[2].length);
 
-const fraseFinal = frase.concat(linguagem);
+// const instrumentos = ['Guitarra', 'Baixo', 'Violão'];
+// instrumentos.sort();
 
-const fruta = "Banana";
+// console.log(instrumentos)
+// const idades = [32,21,33,43,1,12,8];
+// idades.sort()
 
-const listaFrutas = "Melancia, Banana,Laranja";
+// console.log(idades)
 
-console.log(fruta.startsWith("Ba"));
 
-const preco = "R$99,00";
 
-const listaPrecos = ["R$ 99", "R$ 199", "R$ 1200"];
+const carros = ['Ford', 'Fiat', 'VW'];
+carros.unshift('Honda', 'Kia'); 
+console.log(carros); 
 
-listaPrecos.forEach((item) => {
-  console.log(item.padStart(15, "="));
-});
+carros.push('Ferrari'); 
+console.log(carros); 
 
-const frase2 = "Ta";
+const primeiroCarro = carros.shift(); 
+console.log(carros); 
 
-frase2.repeat(5);
-
-let listaItens = "Camisas Bonés Calças Bermudas Vestidos Saias";
-// listaItens = listaItens.replace(/[ ]+/g, ", ");
-
-const arrayLista = listaItens.split(" ");
-
-console.log(arrayLista);
-
-const htmlText = "<div>O melhor item</div><div>A melhor lista</div>";
-const htmlArray = htmlText.split("div");
-const novoHtml = htmlArray.join("section");
-
-console.log(htmlText);
-console.log(htmlArray);
-
-const frutasArray = ["Banana", "Melancia", "Laranja"];
-
-const sexo1 = "Feminino";
-const sexo2 = "feminino";
-const sexo3 = "FEMININO";
-
-console.log(sexo1.toLowerCase() === "feminino");
+const ultimoCarro = carros.pop(); 
+console.log(carros); 
