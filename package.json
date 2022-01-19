@@ -1,0 +1,31 @@
+{
+  "name": "origamid-js",
+  "version": "1.0.0",
+  "description": "Repositório criado para organizar o Curso de javascript da origamid",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commit": "cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malconn/origamid-js.git"
+  },
+  "author": "Malcon Augusto <malconaugusto@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/malconn/origamid-js.git/issues"
+  },
+  "homepage": "https://github.com/malconn/origamid-js.git#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^14.1.0",
+    "@commitlint/config-conventional": "^14.1.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
