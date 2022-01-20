@@ -26,14 +26,30 @@
 
 
 const carros = ['Ford', 'Fiat', 'VW'];
-carros.unshift('Honda', 'Kia'); 
-console.log(carros); 
+const novaArray = carros.push('Honda', 'Kia'); 
 
-carros.push('Ferrari'); 
-console.log(carros); 
 
-const primeiroCarro = carros.shift(); 
-console.log(carros); 
+// console.log(carros);
+// console.log(carros.splice(2,1,'Fusca'))
 
-const ultimoCarro = carros.pop(); 
-console.log(carros); 
+// console.log(carros);
+
+// console.log(['Item1', 'Item2', 'Item3', 'Item4','Item5'].copyWithin(2, 0, 2));
+// console.log(['Item1', 'Item2', 'Item3', 'Item4','Item4','Item4','Item4','Item4'].fill('Banana', this.length))
+
+// const transporte1 = ['Barco', 'Aviao'];
+// const transporte2 = ['Carro', 'Moto'];
+
+
+// let htmlString = '<h2>Título Principal</h2>'
+
+
+const linguagens = ['html', 'css', 'js', 'php', 'python', 'js'];
+
+
+// console.log(linguagens.slice(2,4))
+
+const cloneLinguagens = linguagens.slice();
+console.log(linguagens.pop())
+console.log(linguagens)
+console.log(cloneLinguagens)
