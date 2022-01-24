@@ -15,16 +15,21 @@ let cursos = [
 ];
 const Aulas = cursos.reduce((acumulador, atual, index) => {
   acumulador[index] = atual.aulas;
+  acumulador[index] = atual.horas;
+  acumulador[index] = atual.descricao;
+  acumulador[index] = atual.title;
   return acumulador;
 }, {});
 // Retorne uma lista com os
 // números maiores que 100
 const numeros = [3, 44, 333, 23, 122, 322, 33];
-
+const maiorNumero = numeros.reduce((anterior,atual)=>{
+  return anterior < atual ? atual : anterior;
+})
 // Verifique se Baixo faz parte
 // da lista de instrumentos e retorne true
 const instrumentos = ["Guitarra", "Baixo", "Bateria", "Teclado"];
-
+const baixoTem = instrumentos.includes('Baixo')
 // Retorne o valor total das compras
 const compras = [
   {
