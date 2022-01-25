@@ -23,13 +23,13 @@ const Aulas = cursos.reduce((acumulador, atual, index) => {
 // Retorne uma lista com os
 // números maiores que 100
 const numeros = [3, 44, 333, 23, 122, 322, 33];
-const maiorNumero = numeros.reduce((anterior,atual)=>{
+const maiorNumero = numeros.reduce((anterior, atual) => {
   return anterior < atual ? atual : anterior;
-})
+});
 // Verifique se Baixo faz parte
 // da lista de instrumentos e retorne true
 const instrumentos = ["Guitarra", "Baixo", "Bateria", "Teclado"];
-const baixoTem = instrumentos.includes('Baixo')
+const baixoTem = instrumentos.includes("Baixo");
 // Retorne o valor total das compras
 const compras = [
   {
@@ -53,3 +53,11 @@ const compras = [
     preco: "R$ 10,60",
   },
 ];
+const precos = compras.map((items) => {
+  return items.preco.slice(2).trim().replace(`,`, `.`);
+});
+
+// const valorCompras = precos.reduce((acumulador, atual) => {
+//   const total = acumulador + atual;
+//   return total;
+// }, 0);
