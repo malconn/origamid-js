@@ -3,7 +3,7 @@
 // aulas e horas de cada curso
 const titulos = document.querySelectorAll(".curso h1");
 const descricao = document.querySelectorAll(".curso p");
-const aulas = document.querySelectorAll(".curso span.aulas");
+const aulas = document.querySelectorAll(".curso span.aulas")
 const horas = document.querySelectorAll(".curso span.horas");
 let cursos = [
   {
@@ -14,10 +14,7 @@ let cursos = [
   },
 ];
 const Aulas = cursos.reduce((acumulador, atual, index) => {
-  acumulador[index] = atual.aulas;
-  acumulador[index] = atual.horas;
-  acumulador[index] = atual.descricao;
-  acumulador[index] = atual.title;
+  
   return acumulador;
 }, {});
 // Retorne uma lista com os
@@ -57,7 +54,8 @@ const precos = compras.map((items) => {
   return items.preco.slice(2).trim().replace(`,`, `.`);
 });
 
-// const valorCompras = precos.reduce((acumulador, atual) => {
-//   const total = acumulador + atual;
-//   return total;
-// }, 0);
+const valorCompras = precos.reduce((acumulador, atual) => {
+  const total = (+acumulador) + (+atual);
+  const priceTotal = total.toLocaleString('pt-BR',{style:'currency', currency:'BRL'});
+  return priceTotal;
+}, 0);
