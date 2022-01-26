@@ -2,20 +2,18 @@
 // com objetos contendo o título, descricao,
 // aulas e horas de cada curso
 const titulos = document.querySelectorAll(".curso h1");
+const arrayTitulo = Array.from(titulos);
+
 const descricao = document.querySelectorAll(".curso p");
+const arrayDescricao = Array.from(descricao);
+
 const aulas = document.querySelectorAll(".curso span.aulas");
+const arrayAulas = Array.from(aulas);
+
 const horas = document.querySelectorAll(".curso span.horas");
-let cursos = [
-  {
-    title: titulos,
-    descricao: descricao,
-    aulas: aulas,
-    horas: horas,
-  },
-];
-const Aulas = cursos.reduce((acumulador, atual, index) => {
-  return acumulador;
-}, {});
+const arrayHoras = Array.from(horas);
+
+let cursos = [];
 // Retorne uma lista com os
 // números maiores que 100
 const numeros = [3, 44, 333, 23, 122, 322, 33];
