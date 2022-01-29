@@ -45,8 +45,27 @@ const frutas = ["Banana", "Uva", "Pera"];
 Array.prototype.pop.call(frutas);
 
 const li = document.querySelectorAll("li");
-const filtro = Array.prototype.filter.call(li, (item) => {
-  console.log(item);
+const filtro = Array.prototype.filter.bind(li, (item) => {
   return item.classList.contains("ativo");
 });
 console.log(filtro);
+
+const numeros = [22, 33, 434, 2243, 455];
+
+const $ = document.querySelectorAll.bind(document);
+
+const carro = {
+  marca: "Ford",
+  ano: 2018,
+  acelerar: function (aceleracao, tempo) {
+    return `${this.marca} acelerou ${aceleracao} em ${tempo}`;
+  },
+};
+
+const honda = {
+  marca: "Honda",
+};
+
+const acelerarHonda = carro.acelerar.bind(honda);
+
+// se a função é pura e não precisa referenciar a nenhum obj, ela deve receber null como primeiro argumento de call ou bind (call : pra ser usado apenas nesse único ex e bind pode ser replicado e chamado posteriormente na variável que ele está ex : acelerarHonda)
