@@ -9,15 +9,24 @@ const lengthParagraphs = Array.from(paragraphs).reduce((acumulador, atual) => {
 // Crie uma função que retorne novos elementos
 // html, com os seguintes parâmetros
 // tag, classe e conteudo.
-function DOM(element){
-  this.element = document.querySelector(element);
-  this.classe = (classe)=>{
-    return this.element.classList.add(classe);
-  };
-  this.conteudo = (conteudo)=>{
-    return this.element.innerText = conteudo
-  };
-}
+let DOM = {
+  html: function (html) {
+    document.querySelector(html);
+  },
+  classe: function () {
+    return this.html.classList.add(classe);
+  },
+  conteudo: function () {
+    return this.conteudo.innerText;
+  },
+};
 // Crie uma nova função utilizando a anterior como base
 // essa nova função deverá sempre criar h1 com a
 // classe titulo. Porém o parâmetro conteudo continuará dinâmico
+let conteudoH1 = DOM.conteudo;
+
+const newH1 = conteudoH1.bind(DOM, "h1", "titulo");
+
+newH1("teste");
+
+console.log(newH1);
