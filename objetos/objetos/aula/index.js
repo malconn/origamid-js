@@ -34,22 +34,51 @@
 //   },
 // }
 
-
 const moto = {
-  capacete : true,
-}
+  capacete: true,
+};
 
 // Object.assign(moto,funcaoAutomovel,carro)//aqui ele vai pegar um objeto já criado e colocar para ele infos de outros objetos criados, como se fosse herdar de uma função construtora
 
-Object.defineProperties(moto,{
+Object.defineProperties(moto, {
   rodas: {
-    get(){
-      return  this._rodas;
+    get() {
+      return this._rodas;
     },
-    set(valor){
-      this._rodas = valor * 4 + ' Total rodas'
-    }
-  }
-})
+    set(valor) {
+      this._rodas = valor * 4 + " Total rodas";
+    },
+  },
+});
 
-delete moto.capacete
+console.log(Object.getOwnPropertyDescriptors(Array));
+
+const innerHeightConfig = Object.getOwnPropertyDescriptor(
+  window,
+  "innerHeight"
+);
+
+Object.getOwnPropertyNames(Array); //do construtor de array
+Object.getOwnPropertyNames(Array.prototype); //do array já depois de feito, ou seja, recebendo coisas do construtor
+
+const frutas = ["Banana"];
+
+console.log(Object.getPrototypeOf(frutas));
+const frutas1 = ["Banana", "Pêra"];
+const frutas2 = ["Banana", "Pêra"];
+
+const novaFruta = frutas1; //isso aqui muda os valores da array que eu estou recebendo, para que ele possa diferenciar, eu teria que de alguma forma clonar o array
+console.log(
+  Object.is(frutas1, frutas2)
+    ? "são iguais e um modifica o outro"
+    : "são diferentes"
+);
+
+const carro = {
+  marca: "Ford",
+  ano: 2018,
+};
+
+Object.seal(carro);
+
+carro.marca = "Honda";
