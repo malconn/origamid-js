@@ -6,7 +6,10 @@ function verificarDado (dado){
 // Crie um objeto quadrado com
 // a propriedade lados e torne
 // ela imutável
-
+const quadrado = {
+  lados:4
+};
+Object.freeze(quadrado);
 // Previna qualquer mudança
 // no objeto abaixo
 const configuracao = {
@@ -18,5 +21,5 @@ Object.freeze(configuracao)
 // Liste o nome de todas
 // as propriedades do
 // protótipo de String e Array
-const prototypeString = verificarDado(String).__proto__
-const prototypeArray = verificarDado(Array).__proto__
+const prototypeString =Object.getOwnPropertyNames(String.prototype)
+const prototypeArray = Object.getOwnPropertyNames(Array.prototype)
