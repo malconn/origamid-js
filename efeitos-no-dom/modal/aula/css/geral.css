@@ -1,6 +1,3 @@
-[data-cor^='azul']{
-  background: #e54;
-}
 body,
 h1,
 h2,
@@ -26,10 +23,11 @@ body {
   background: #faf6ed;
   color: #222;
   -webkit-font-smoothing: antialiased;
+}
+.grid-container{
   display: grid;
   grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
 }
-
 .menu {
   grid-column: 3/ 5;
   margin-top: 2rem;
@@ -185,7 +183,7 @@ body {
 }
 
 @media (max-width: 700px) {
-  body {
+  .grid-container {
     grid-template-columns: 1fr;
   }
   .menu,
@@ -216,54 +214,38 @@ body {
   }
 }
 
-.js [data-tab="content"] section {
+.js .js-tabcontent section {
   display: none;
 }
-[data-tab="content"] section.ativo {
+.js-tabcontent section.ativo {
   display: block !important;
+  animation: show 0.5s forwards;
 }
-[data-tab="content"] section.ativo.show-right {
-  display: block !important;
-  animation: show-right 0.5s forwards;
-}
-[data-tab="content"] section.ativo.show-down {
-  display: block !important;
-  animation: show-down 0.5s forwards;
-}
-@keyframes show-right {
+
+@keyframes show {
   from {
     opacity: 0;
-    transform: translate3d(-30px, 0, 0);
+    transform: matrix3d(-30px, 0, 0);
   }
   to {
     opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-@keyframes show-down {
-  from {
-    opacity: 0;
-    transform: translate3d(0,-30px,0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
+    transform: matrix3d(0, 0, 0);
   }
 }
 
 
-.js [data-anime="accordion"] dd{
+.js .js-accordion dd{
   display: none;
 }
 
-[data-anime="accordion"] dt::after{
+.js-accordion dt::after{
   content: '⤵';
   margin-left: 10px;
 }
-[data-anime="accordion"] dt.ativo::after{
+.js-accordion dt.ativo::after{
   content: '⤴';
 }
-[data-anime="accordion"] dd.ativo{
+.js-accordion dd.ativo{
   display: block!important;
   animation: slideDown .5s forwards;
 }
@@ -279,12 +261,12 @@ body {
   }
 }
 
-.js [data-anime="scroll"]{
+.js .js-scroll{
   opacity: 0;
   transform: translate3d(-30px , 0 , 0);
   transition: .3s;
 }
-.js [data-anime="scroll"].ativo{
+.js .js-scroll.ativo{
   opacity: 1;
   transform: translate3d(0 , 0 , 0);
 }
